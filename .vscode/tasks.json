@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "tasks": [
+        {       
+            "command": "g++",
+            "taskName": "build",
+            "args": ["-Wall", "${relativeFile}", "-o", "${relativeFile}.exe", "-pedantic"],
+            "isBuildCommand": true
+        },
+        {
+            "command": "./${relativeFile}.exe",
+            "taskName": "run",
+            "isTestCommand": true
+        }
+    ]
+}
